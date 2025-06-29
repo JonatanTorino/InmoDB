@@ -1,0 +1,66 @@
+n8nTEST.xlsx
+OneDrive-2025-03-20.zip
+Av Cabildo 3226 3°E/
+├── 1af04ee4-a803-4c49-b0e8-2c5de4e99743.JPG
+├── 3d4dd1f2-bb2e-4d80-bd2a-65d7135a1061.JPG
+├── 5ae31703-e0a4-45fd-9eeb-bbb9f823d23e.JPG
+├── 22b511ab-4632-40cd-a677-e5813c0c7967.JPG
+├── 91f456ae-4850-481e-ac6e-5bda391bab05.JPG
+├── 280015a5-b384-4034-8b55-d49fb5f3af92.JPG
+├── 13957420-6d44-490b-9ae8-57a1f84da9bc.JPG
+├── a7453a99-13d0-4514-a14f-0ccfb74ee05d.JPG
+├── bbce01e3-6d69-4482-9930-d7c0469c67cd.JPG
+├── ceeeb5b8-8363-43cc-8732-b38ffeb9ef47.JPG
+├── e0da47d5-2cb8-4b64-a82d-4ce0c383887c.JPG
+├── ea3eeacd-b54d-47ff-b23a-1c9456d724a9.JPG
+└── f4ff057c-8f20-492f-887e-5f62acf5cc71.JPG
+Av Mayo 1316 6°H/
+├── CD consorcio Av, de mayo.docx
+├── Daniel Antonio Fondevila/
+│   ├── Av. de Mayo 1316 piso 6 depto H Daniel Antonio Fondevila.docx
+│   └── CONTRATO DE GARANTIA FONDEVILA.docx
+└── Juan Pablo Arias/
+    ├── Entrega de llaves Juan Pablo Arias.docx
+    ├── SA Agip Av  Mayo.jpg
+    ├── SA Av. Mayo FacturaMetroGAS-40000043178-430001605731.pdf
+    └── SA AvMayoContrato20222025.pdf
+Av. Dorrego 2765 5D/
+├── Av. Dorrego 2765 5 D Reserva.docx
+└── Av. Dorrego 2765 5D Contrato de locacion 2024.docx
+Baradero 252 1°E/
+├── SA Afip Baradero 252 1 E (junio 22-mayo 25).docx
+├── SA AGIP Baradero 1E.jpg
+└── SA Metrogás Baradero 1E.jpg
+
+
+Inmobiliaria/
+├── [Tipo operación N]/
+│   └── [Directorio Domicilio]/
+│       ├── [NombreArchivo]
+│       └── [SubDirectorio N]/
+├── [Tipo operación N]/
+│   ├── [Directorio Domicilio]/
+│   │   ├── [NombreArchivo]
+│   │   └── [SubDirectorio N]/
+│   ├── [Directorio Domicilio]/
+│   │   │── [SubDirectorio N]/
+│   │   │   └── [NombreArchivo]
+│   │   │── [SubDirectorio N]/
+│   │   │   └── [NombreArchivo]
+│   │   └── [NombreArchivo]
+│   ├── [Directorio Domicilio]/
+│       ├── [NombreArchivo]
+│       └── [SubDirectorio N]/
+└── [Tipo operación N]/
+    └── [Directorio Domicilio]/
+        ├── [NombreArchivo]
+        └── [SubDirectorio N]/
+
+Av Mayo 1316 6°H/
+├── CD consorcio Av, de mayo.docx
+├── Daniel Antonio Fondevila/
+│   ├── Av. de Mayo 1316 piso 6 depto H Daniel Antonio Fondevila.docx
+│   └── CONTRATO DE GARANTIA FONDEVILA.docx
+└── Juan Pablo Arias/
+    ├── Entrega de llaves Juan Pablo Arias.docx
+    ├── SA Agip Av  Mayo.jpg

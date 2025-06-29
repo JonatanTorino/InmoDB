@@ -1,0 +1,41 @@
+@startuml Sistema de Extracción de Contratos de Arrendamiento
+title Sistema de Extracción de Contratos de Arrendamiento
+
+package "Fase 1 - Extracción y Exportación" {
+  [Lector Word/PDF] --> [Extractor de Texto]
+  [Extractor de Texto] --> [Procesador NLP]
+  [Procesador NLP] --> [Extractor de Datos Clave]
+  [Extractor de Datos Clave] --> [Generador Embeddings]
+  [Generador Embeddings] --> [ChromaDB (Vector DB)]
+  [Extractor de Datos Clave] --> [Exportador Excel]
+}
+
+package "Fase 2 - Consultas con Chatbot" {
+  [Interfaz Streamlit (Chatbot)]
+  [Interfaz Streamlit (Chatbot)] --> [LangChain]
+  [LangChain] --> [ChromaDB (Vector DB)]
+  [LangChain] --> [LLM Local (Ollama)]
+  [LLM Local (Ollama)] --> [Procesador de Respuestas]
+}
+
+package "Fase 3 - Monitoreo Automático" {
+  [Watcher de Archivos] --> [Validador de Contratos Nuevos]
+  [Validador de Contratos Nuevos] --> [Pipeline de Fase 1]
+}
+
+package "Recursos" {
+  [Contrato Modelo]
+  [Contrato Modelo] --> [Procesador NLP]
+}
+
+note top of [ChromaDB (Vector DB)]
+  Base de datos local
+  para embeddings y metadatos
+end note
+
+note bottom of [Exportador Excel]
+  Archivo .xlsx con
+  campos estructurados
+end note
+
+@enduml
