@@ -5,42 +5,49 @@
 ### 1.1 Componentes Principales (Abstractos)
 
 #### A. Procesador de Documentos
+
 - **Función**: Leer y extraer texto de archivos Word/PDF
 - **Entrada**: Archivos de documentos
 - **Salida**: Texto plano estructurado
 - **Intercambiabilidad**: Módulo independiente con interfaz estándar
 
 #### B. Motor de Análisis de Texto
+
 - **Función**: Procesar texto y extraer información específica
 - **Entrada**: Texto plano
 - **Salida**: Datos estructurados (JSON)
 - **Intercambiabilidad**: API REST o biblioteca con interfaz común
 
 #### C. Generador de Embeddings
+
 - **Función**: Convertir texto a representaciones vectoriales
 - **Entrada**: Texto procesado
 - **Salida**: Vectores numéricos
 - **Intercambiabilidad**: Servicio independiente con API estándar
 
 #### D. Base de Datos Vectorial
+
 - **Función**: Almacenar y consultar embeddings
 - **Entrada**: Vectores + metadatos
 - **Salida**: Resultados de búsqueda similitud
 - **Intercambiabilidad**: Driver de conexión intercambiable
 
 #### E. Exportador de Datos
+
 - **Función**: Generar archivos Excel con registros
 - **Entrada**: Datos estructurados
 - **Salida**: Archivo Excel
 - **Intercambiabilidad**: Módulo con interfaz de escritura común
 
 #### F. Motor de Consultas (Fase 2)
+
 - **Función**: Procesar consultas en lenguaje natural
 - **Entrada**: Query del usuario
 - **Salida**: Respuesta contextual
 - **Intercambiabilidad**: LLM intercambiable vía API
 
 #### G. Orquestador Principal
+
 - **Función**: Coordinar todos los componentes
 - **Entrada**: Configuración + parámetros de ejecución
 - **Salida**: Logs de ejecución + resultados
@@ -51,12 +58,14 @@
 ### 2.1 Procesador de Documentos
 
 #### Opción A: Bibliotecas Python Locales
+
 - **Word**: python-docx, docx2txt
 - **PDF**: PyMuPDF, pdfplumber, PyPDF2
 - **Ventajas**: Completamente gratuito, control total
 - **Desventajas**: Limitaciones con documentos complejos
 
 #### Opción B: APIs de Procesamiento
+
 - **Adobe PDF Services API**: Cuota gratuita 1000 docs/mes
 - **Microsoft Graph API**: Cuota gratuita limitada
 - **Google Drive API**: Cuota gratuita 100 req/100s
@@ -64,6 +73,7 @@
 - **Desventajas**: Dependencia externa, límites de cuota
 
 #### Opción C: Servicios Open Source
+
 - **Apache Tika**: Vía REST API local con Docker
 - **Pandoc**: Conversión local
 - **Ventajas**: Potente, sin límites de cuota
@@ -72,6 +82,7 @@
 ### 2.2 Motor de Análisis de Texto
 
 #### Opción A: Bibliotecas NLP Python
+
 - **spaCy**: Modelos pre-entrenados gratuitos
 - **NLTK**: Toolkit completo gratuito
 - **Transformers (Hugging Face)**: Modelos gratuitos
@@ -79,6 +90,7 @@
 - **Desventajas**: Requiere configuración de modelos
 
 #### Opción B: APIs de NLP
+
 - **Google Cloud Natural Language**: $1-2 per 1K docs
 - **AWS Comprehend**: Cuota gratuita 50K docs/mes
 - **Azure Text Analytics**: Cuota gratuita 5K docs/mes
@@ -86,6 +98,7 @@
 - **Desventajas**: Costos después de cuotas gratuitas
 
 #### Opción C: Modelos LLM Locales
+
 - **Ollama + Llama/Mistral**: Completamente gratuito
 - **GPT4All**: Modelos locales gratuitos
 - **Ventajas**: Sin límites, privacidad total
@@ -94,6 +107,7 @@
 ### 2.3 Generador de Embeddings
 
 #### Opción A: Modelos Locales
+
 - **sentence-transformers**: Modelos gratuitos
 - **OpenAI Ada (local via oobabooga)**: Gratuito
 - **all-MiniLM-L6-v2**: Modelo liviano gratuito
@@ -101,6 +115,7 @@
 - **Desventajas**: Calidad variable según modelo
 
 #### Opción B: APIs de Embeddings
+
 - **OpenAI Embeddings**: $0.0001 per 1K tokens
 - **Cohere Embed**: Cuota gratuita 100 calls/min
 - **Google Vertex AI**: Cuota gratuita limitada
@@ -108,6 +123,7 @@
 - **Desventajas**: Costos escalables
 
 #### Opción C: Servicios Open Source
+
 - **Sentence-BERT Server**: Docker local
 - **Universal Sentence Encoder**: TensorFlow local
 - **Ventajas**: Balance calidad/costo
@@ -116,6 +132,7 @@
 ### 2.4 Base de Datos Vectorial
 
 #### Opción A: Soluciones Locales
+
 - **ChromaDB**: Completamente gratuito, SQLite backend
 - **Faiss (Facebook)**: Biblioteca gratuita, muy rápida
 - **Annoy (Spotify)**: Biblioteca gratuita, eficiente
@@ -123,6 +140,7 @@
 - **Desventajas**: Escalabilidad limitada
 
 #### Opción B: Servicios Cloud Gratuitos
+
 - **Pinecone**: 1M vectores gratis, 1 índice
 - **Weaviate Cloud**: Cluster gratuito pequeño
 - **Qdrant Cloud**: 1GB gratis
@@ -130,6 +148,7 @@
 - **Desventajas**: Límites de cuota gratuita
 
 #### Opción C: Autohosteado con Docker
+
 - **Weaviate**: Docker local
 - **Qdrant**: Docker local
 - **Milvus**: Docker local (más complejo)
@@ -139,6 +158,7 @@
 ### 2.5 Motor de Consultas (Fase 2)
 
 #### Opción A: LLMs Locales
+
 - **Ollama**: Llama2, Mistral, CodeLlama gratuitos
 - **GPT4All**: Modelos locales variados
 - **LocalAI**: Compatible con OpenAI API
@@ -146,6 +166,7 @@
 - **Desventajas**: Requiere recursos, calidad variable
 
 #### Opción B: APIs de LLM
+
 - **OpenAI GPT-3.5/4**: $0.001-0.03 per 1K tokens
 - **Anthropic Claude**: Cuota gratuita limitada
 - **Google Bard/Gemini**: Cuota gratuita
@@ -153,6 +174,7 @@
 - **Desventajas**: Costos escalables
 
 #### Opción C: Servicios Open Source
+
 - **Hugging Face Inference API**: Cuota gratuita
 - **Together AI**: Cuota gratuita inicial
 - **Ventajas**: Balance calidad/costo
@@ -292,6 +314,7 @@ python contract_processor.py config \
 **VIABILIDAD: ALTA** ✅
 
 #### Factores Positivos:
+
 - **Separación de configuración**: JSON config independiente del código
 - **Validación previa**: Parámetros validados antes de ejecución
 - **Rollback capability**: Fácil revertir cambios de configuración
@@ -299,6 +322,7 @@ python contract_processor.py config \
 - **Flexibilidad**: Múltiples plantillas para diferentes escenarios
 
 #### Riesgos Controlables:
+
 - **Inyección de código**: Mitigado con validación estricta de JSON
 - **Exposición de credenciales**: Archivo de configuración con permisos restringidos
 - **Configuración inválida**: Validación previa obligatoria
